@@ -1,0 +1,37 @@
+﻿@model ViewBag.Models.Student
+<h1>
+    @ViewBag.StudentId
+    
+</h1>
+<h1>@ViewBag.Name</h1>
+<h1>
+    @ViewBag.Age
+</h1>
+
+
+@foreach (var item in @ViewBag.NameList){
+    <h3>@item</h3>
+}
+
+<br />
+@{
+    var student = ViewBag.StudentList;
+}
+Id:@student.Id<br />
+Name:@student.Name<br />
+Description:@student.Description<br />
+StudentId:@student.StudentId
+<br />
+
+@foreach (var item in ViewBag.MyStudentList)
+{
+    <div>
+        Id: @item.Id
+        <br>
+        Name:@item.Name<br />
+        Description:@item.Description<br />
+        StudentId:@item.StudentId
+
+    </div>
+}
+
